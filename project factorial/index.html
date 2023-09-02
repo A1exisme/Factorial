@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #i1{
+            display: none;
+        }
+        .d1{
+            text-align: center;
+            padding: 10%;
+            font-size: 22px;
+            font-family: cursive;
+            background-color: rgba(95, 40, 19, 0.692);
+        }#i2:hover{
+            background-image: linear-gradient(to bottom right,blue,red,green);
+            width: 20%;
+            height: 12%;
+        }
+        input{
+            border-radius: 10%;
+            height: 3vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="d1">
+    <p id="p1">Enter a number for factorial</p>
+    <input type="number" id="n1"><br>
+    <input type="text" id="i1"><br>
+    <input type="submit" value="factorial" id="i2" onclick="factorial()">
+</div>
+    <script>
+        function factorial(){
+        var a =document.getElementById("n1").value;
+        var ans = 1;
+        for(var i=a;i>0;i--){
+           ans=ans*i;
+        }
+        document.getElementById("i1").value=ans;
+        document.getElementById("i1").style.display="inline";
+        document.getElementById("n1").style.display="none";
+    }
+    </script>
+</body>
+</html>
